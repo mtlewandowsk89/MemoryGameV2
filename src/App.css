@@ -2,37 +2,72 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gameBoard {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  padding: 5px;
+  border: 1px solid #000;
+  width: 750px;
+  height: 750px;
+  margin: 20px auto;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tile {
+  border: 1px solid #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.previewTile {
+  background-color: blue;
 }
 
-.App-link {
-  color: #61dafb;
+.correctTile {
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrongTile {
+  background-color: red;
+}
+
+.slider {
+  margin: 30px 0 0 10px;
+}
+
+.difficultyLabel, .difficulty {
+  font-size: 18px;
+}
+
+.difficulty, .startButton, .resetButton {
+  margin: 10px 0;
+}
+
+button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.startButton {
+  background-color: green;
+  margin-right: 20px;
+}
+
+.resetButton {
+  background-color: red;
+  margin-left: 20px;
+}
+
+.win {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px #000000;
 }
